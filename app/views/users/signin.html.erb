@@ -1,0 +1,20 @@
+<%= form_for @user, url: login_path do |f| %>
+
+    <%= f.label :name %>
+    <%= select_tag "user_name", options_from_collection_for_select(@users, "id", "name") %>
+
+    <%= f.label :password %>
+    <%= f.text_field :password %></br>
+
+    <%= f.submit "Sign In" %>
+  <% end %>
+
+
+
+  
+
+
+
+
+
+  
