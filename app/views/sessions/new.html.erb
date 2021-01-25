@@ -1,0 +1,12 @@
+<h1>Log in</h1>
+<%= form_for @user, :url => url_for(:controller => "sessions", :action => "create") do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Your name:" %>
+    <%= collection_select :user, :name, @users, :name, :name %></div>
+  <div class="form-group">
+    <%= f.label :password, "Your password" %>
+    <%= f.text_field :password, :class => "form-control" %></div>
+  <div class="actions">
+    <%= f.submit "Sign In" %></div>
+<% end %>
+</div>

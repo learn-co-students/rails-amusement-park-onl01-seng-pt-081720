@@ -8,10 +8,9 @@ class User < ActiveRecord::Base
   after_initialize :set_default, unless: :persisted?
 
   def mood
-    self.nausea > self.happiness ? mood = "sad" : mood = "happy"
+    #only a non admin can have a mood
+    (self.happiness.to_i > self.nausea.to_i) ? "happy" : "sad"
   end
-
-  private
 
   def set_default
     self.admin ||= false if self.admin.nil?

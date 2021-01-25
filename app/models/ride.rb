@@ -4,7 +4,7 @@ class Ride < ActiveRecord::Base
 
   def take_ride
     if meets_all_requirements
-      "Enjoy the #{self.attraction.name}"
+      "Thanks for riding the #{self.attraction.name}!"
       #is tall enough but not enough tickets
     elsif self.user.tickets < self.attraction.tickets && self.user.height >= self.attraction.min_height
       "Sorry. You do not have enough tickets to ride the #{self.attraction.name}."
