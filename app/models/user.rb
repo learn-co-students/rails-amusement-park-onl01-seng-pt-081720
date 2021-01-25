@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   after_initialize :set_default, unless: :persisted?
 
   def mood
-    #only a non admin can have a mood
+    #test will only pass if i covert to integer
     (self.happiness.to_i > self.nausea.to_i) ? "happy" : "sad"
   end
 
