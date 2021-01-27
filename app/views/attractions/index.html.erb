@@ -1,0 +1,10 @@
+<h1>Attractions</h1>
+<br>
+<% @attractions.each do |attr| %>
+    <%= link_to "#{attr_name_label(@user)}#{attr.name}", attraction_path(attr) %>
+    <br>
+<% end %>
+<br>
+<% if @user.admin %>
+    <%= link_to "New Attraction", new_attraction_path %>
+<% end %>

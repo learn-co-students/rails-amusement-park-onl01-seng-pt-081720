@@ -1,0 +1,8 @@
+<ul>
+    <li>Tickets: <%= user.tickets %></li>
+    <li>Mood: <%= user.mood if user.happiness %></li>
+    <li>Height: <%= user.height if user.height %></li>
+    <% if user.admin %>
+        <li>ADMIN</li>
+    <% end %>
+</ul>

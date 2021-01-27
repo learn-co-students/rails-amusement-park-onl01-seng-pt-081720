@@ -1,0 +1,7 @@
+<% if session[:user_id] %>
+  <a class="navbar-brand" href="<%= user_path(current_user) %>"/><%= current_user.name %>'s profile</a>
+  <%= link_to "Log Out", logout_path, method: "post", class: "navbar-brand" %>
+<% else %>
+  <a class="navbar-brand" href="<%= new_user_path %>"/>Sign Up</a>
+  <a class="navbar-brand" href="<%= signin_path %>"/>Login</a>
+<% end %>
