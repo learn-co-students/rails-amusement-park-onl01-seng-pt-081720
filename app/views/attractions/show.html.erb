@@ -1,0 +1,12 @@
+<h1><%= @attraction.name %></h1>
+<ul>
+    <li>Tickets: <%= @attraction.tickets %></li>
+    <li>Minimum Height: <%= @attraction.min_height %></li>
+    <li>Nausea Rating: <%= @attraction.nausea_rating %></li>
+    <li>Happiness Rating: <%= @attraction.happiness_rating %></li>
+</ul>
+
+
+<%= render partial: "attraction_links", locals: {user: @user, attraction: @attraction} %>
+
+

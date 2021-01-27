@@ -1,0 +1,9 @@
+<h1><%= @user.name %></h1>
+
+<% if !!@message %>
+    <h3><%= @message %></h3>
+<% end %>
+
+<%= render partial: "info", locals: {user: @user} %>
+<br>
+<%= link_to "See attractions", attractions_path %>
