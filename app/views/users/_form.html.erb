@@ -1,0 +1,27 @@
+<div class="container" role="main">
+<%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :name %> <br>
+    <%= f.text_field :name, :class => "form-control" %></div>
+  <div class="form-group">
+    <%= f.label :height, "Height (in inches)" %> 
+    <%= f.number_field :height, :class => "form-control" %></div>
+  <div class="form-group">
+    <%= f.label :happiness, "How happy are you? (1-5 scale)" %> 
+    <%= f.number_field :happiness, :min => 1, :max => 5, :class => "form-control" %></div>
+  <div class="form-group">
+    <%= f.label :nausea, "How nauseous are you?" %> 
+    <%= f.number_field :nausea, :min => 1, :max => 5, :class => "form-control" %></div>
+  <div class="form-group">
+    <%= f.label :tickets, "How many dollars are in your pocket" %> 
+    <%= f.number_field :tickets, :class => "form-control" %> </div>
+  <div class="form-group">
+    <%= f.label :admin, "Check box if you are a theme park owner" %>
+    <%= f.check_box :admin, :class => "form-control" %></div>
+  <div class="form-group">
+    <%= f.label :password %> 
+    <%= f.text_field :password, :class => "form-control" %></div>
+  <div class="actions">
+  <%= f.submit :class => "btn btn-primary" %></div>
+<% end %>
+</div>
